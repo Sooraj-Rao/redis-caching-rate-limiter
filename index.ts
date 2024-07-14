@@ -4,19 +4,11 @@ import Redis from "ioredis";
 import { Middleware, RateLimiter } from "./src/middleware";
 import { getProduct, getProductOne } from "./src/dummy";
 import dotenv from "dotenv";
+import redis from "./src/redis";
 dotenv.config();
-
-const redis = new Redis({
-  host: process.env.REDIS_HOST,
-  port: 11752,
-  password: process.env.REDIS_PASS,
-});
 
 const app = express();
 
-redis.on("connect", () => {
-  console.log("Redis connected");
-});
 
 app.get(
   "/",
