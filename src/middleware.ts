@@ -1,6 +1,6 @@
 // middleware.ts
 import { NextFunction, Request, Response } from "express";
-import { redis } from "..";
+import redis from "..";
 
 interface RateLimiterOptions {
   limit: number;

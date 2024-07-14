@@ -6,13 +6,13 @@ import { getProduct, getProductOne } from "./src/dummy";
 import dotenv from "dotenv";
 dotenv.config();
 
-const app = express();
-
-export const redis = new Redis({
+const redis = new Redis({
   host: process.env.REDIS_HOST,
   port: 11752,
   password: process.env.REDIS_PASS,
 });
+
+const app = express();
 
 redis.on("connect", () => {
   console.log("Redis connected");
@@ -64,3 +64,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
+export default redis;
