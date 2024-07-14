@@ -13,7 +13,7 @@ export const getProduct = () => {
           age: 2 * 4,
         },
       ]);
-    }, 2000);
+    }, 1000);
   });
 };
 
