@@ -1,4 +1,3 @@
-// middleware.ts
 import { NextFunction, Request, Response } from "express";
 import redis from "..";
 
