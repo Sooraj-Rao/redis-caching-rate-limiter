@@ -1,4 +1,3 @@
-// index.ts
 import express from "express";
 import Redis from "ioredis";
 import { Middleware, RateLimiter } from "./src/middleware";
